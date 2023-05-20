@@ -11,16 +11,13 @@
 </body>
 <script>
     const element = document.getElementById('body')
-
-    let arrColor = ['#f00', '#0f0', '#00f']
-    let cont = 0
+    let maxIndexColor = 16777215
+    let color = null
 
     window.onclick = () => {
-        cont++
+        color = Math.floor(Math.random() * maxIndexColor).toString(16)
 
-        cont == arrColor.length ? cont = 0 : null
-
-        element.style.backgroundColor = `${arrColor[cont]}`
+        element.style.backgroundColor = `#${color}`
     }
 </script>
 </html>
