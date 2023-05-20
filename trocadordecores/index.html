@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocador de cores</title>
+</head>
+<body id="body">
+    <p>Click for change color!</p>
+</body>
+<script>
+    const element = document.getElementById('body')
+
+    let arrColor = ['#f00', '#0f0', '#00f']
+    let cont = 0
+
+    window.onclick = () => {
+        cont++
+
+        cont == arrColor.length ? cont = 0 : null
+
+        element.style.backgroundColor = `${arrColor[cont]}`
+    }
+</script>
+</html>
